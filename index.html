@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <!-- მეტა მონაცემები: კოდირება, მობილური ეკრანი, სათაური და აღწერა საძიებოებისთვის -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamta Nails — მანიკურის სალონი ბათუმში</title>
+    <meta name="description" content="Tamta Nails — მანიკური, შილაკი, დაგრძელება და ინდივიდუალური დიზაინი ბათუმში. სისუფთავე, ხარისხი და მშვიდი გარემო.">
+    <meta name="theme-color" content="#FAF6F2">
+    <link rel="icon" type="image/jpeg" href="img/mtavarilogo.jpg">
+
+    <!-- შრიფტები: ლათინური/კირილიცა (Cormorant, Manrope) + ქართული (Noto Georgian) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;500&display=swap">
+
+    <!-- სტილების ფაილი -->
+    <link rel="stylesheet" href="tamtasnails.css">
+    <!-- JavaScript: defer — იტვირთება HTML-ის შემდეგ -->
+    <script src="tamtasnails.js" defer></script>
+</head>
+<body>
+    <!-- გადასვლის ბმული კლავიატურით მოსარგებლეთათვის -->
+    <a class="skip-link" href="#main" data-i18n="skip">მთავარ შინაარსზე გადასვლა</a>
+
+    <!-- ჰედერი: ლოგო, ნავიგაცია, ენის არჩევა და ჩაწერის ღილაკი -->
+    <header class="site-header" id="top">
+        <a class="brand" href="index.html" aria-label="Tamta Nails — მთავარი" data-i18n-aria="homeLabel">
+            <img src="./img/mtavarilogo.jpg" alt="" class="brand-logo" width="44" height="44">
+            <span class="brand-name">Tamta <em>Nails</em></span>
+        </a>
+
+        <!-- მობილური მენიუს ღილაკი (ბურგერი) -->
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="მენიუ" data-i18n-aria="menuLabel">
+            <span></span><span></span>
+        </button>
+
+        <!-- ნავიგაციის ბმულები -->
+        <nav class="site-nav" id="site-nav">
+            <ul>
+                <li><a href="#works" data-i18n="navWorks">ნამუშევრები</a></li>
+                <li><a href="service.html" data-i18n="navServices">სერვისები</a></li>
+                <li><a href="#contact" data-i18n="navContact">კონტაქტი</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- ენის გადამრთველი -->
+                <label class="visually-hidden" for="lang-switch" data-i18n="languageLabel">ენა</label>
+                <select id="lang-switch" class="lang-select" disabled>
+                    <option value="ka">ქარ</option>
+                    <option value="en">ENG</option>
+                    <option value="ru">РУС</option>
+                </select>
+                <a class="btn btn-primary btn-sm" href="tel:+995555740079" data-i18n="ctaBook">ჩაწერა</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- მთავარი (Hero) სექცია: სათაური, სლოგანი, ღილაკები და თაღოვანი ფოტო -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow reveal" data-i18n="heroEyebrow">მანიკურის სალონი · ბათუმი</p>
+                <h1 class="hero-title reveal" data-i18n="heroTitle">სილამაზე დეტალებშია</h1>
+                <p class="hero-lead reveal" data-i18n="heroSlogan">აღმოაჩინე შენი სილამაზის სივრცე — სადაც სისუფთავე, ხარისხი, გამორჩეული დიზაინები და მშვიდი გარემო ერთმანეთს ერწყმის.</p>
+                <div class="hero-buttons reveal">
+                    <a class="btn btn-primary" href="tel:+995555740079" data-i18n="ctaBookLong">ჩაეწერე ვიზიტზე</a>
+                    <a class="btn btn-ghost" href="service.html" data-i18n="ctaPrices">ფასები</a>
+                </div>
+            </div>
+
+            <!-- თაღოვანი ფოტო რბილი ფონის ლაქით -->
+            <figure class="hero-media reveal">
+                <div class="hero-blob" aria-hidden="true"></div>
+                <div class="arch">
+                    <img src="./img/fonisfoto.jpg" alt="რძისფერი ნუშის ფორმის ფრჩხილები მარგალიტებით" data-i18n-alt="heroAlt" width="675" height="1200" fetchpriority="high">
+                </div>
+                <figcaption class="hero-badge">
+                    <strong>10:00–20:00</strong>
+                    <span data-i18n="heroBadge">ყოველდღე</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- ნამუშევრების გალერეა: გვერდის მთავარი "შოუ" — გადასათრევი კარუსელი -->
+        <section class="works" id="works" aria-labelledby="works-title">
+            <div class="works-head">
+                <!-- აქტიური ნამუშევრის ბარათი: სათაური და მეტამონაცემები -->
+                <div class="meta-card" aria-live="polite">
+                    <p class="eyebrow" data-i18n="worksEyebrow">ნამუშევრები</p>
+                    <h2 class="meta-title" id="works-title"><span id="meta-title">ოქროსფერი ფრენჩი</span></h2>
+                    <dl class="meta-table">
+                        <div><dt data-i18n="metaStyle">სტილი</dt><dd id="meta-style">ფრენჩი, დეკორი</dd></div>
+                        <div><dt data-i18n="metaShape">ფორმა</dt><dd id="meta-shape">კვადრატი</dd></div>
+                        <div><dt data-i18n="metaService">სერვისი</dt><dd id="meta-service"><a href="service.html">გამაგრება + დიზაინი</a></dd></div>
+                    </dl>
+                </div>
+
+                <!-- კარუსელის მართვის ღილაკები და მრიცხველი -->
+                <div class="rail-controls">
+                    <span class="rail-count"><span id="rail-index">02</span> / <span id="rail-total">07</span></span>
+                    <button class="round-btn" id="rail-prev" type="button" aria-label="წინა ნამუშევარი" data-i18n-aria="previousWork">←</button>
+                    <button class="round-btn" id="rail-next" type="button" aria-label="შემდეგი ნამუშევარი" data-i18n-aria="nextWork">→</button>
+                </div>
+            </div>
+
+            <!-- კარუსელის ზოლი: თითოეულ ბარათს data-id აკავშირებს script.js-ის მონაცემებთან -->
+            <div class="rail-viewport">
+                <div class="rail" id="rail" tabindex="0" role="listbox" aria-activedescendant="work-1" aria-label="ნამუშევრების გალერეა — გამოიყენე ისრები" data-i18n-aria="railLabel">
+                    <div class="obj" data-id="0" role="option" id="work-0" aria-label="ოქროს აქცენტები" aria-selected="false"><img src="./img/sedegi 7.jpg" alt="ოქროს აქცენტები" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="1" role="option" id="work-1" aria-label="ოქროსფერი ფრენჩი" aria-selected="true"><img src="./img/sedegi2.jpg" alt="ოქროსფერი ფრენჩი" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="2" role="option" id="work-2" aria-label="წერტილები და ოქრო" aria-selected="false"><img src="./img/sedegi5.jpg" alt="წერტილები და ოქრო" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="3" role="option" id="work-3" aria-label="წითელი ყვავილი" aria-selected="false"><img src="./img/sedegi6.jpg" alt="წითელი ყვავილი" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="4" role="option" id="work-4" aria-label="ნაზი წერტილები" aria-selected="false"><img src="./img/shedegi4.jpg" alt="ნაზი წერტილები" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="5" role="option" id="work-5" aria-label="ბორდოს ქრომი" aria-selected="false"><img src="./img/shedegi3.jpg" alt="ბორდოს ქრომი" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                    <div class="obj" data-id="6" role="option" id="work-6" aria-label="ვარდისფერი ყვავილები" aria-selected="false"><img src="./img/shedegebi.jpg" alt="ვარდისფერი ყვავილები" loading="lazy" draggable="false"><svg class="scribble" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M100 6 C170 4 196 60 194 120 L192 250 C190 290 150 296 100 294 C40 294 8 288 8 240 L8 110 C8 50 40 8 112 8 C150 10 176 30 186 56"/></svg></div>
+                </div>
+            </div>
+            <p class="rail-hint" data-i18n="railHint">გადაათრიე ან გამოიყენე ისრები</p>
+        </section>
+
+        <!-- ღირებულებები: სამი მოკლე პუნქტი, რატომ ჩვენ -->
+        <section class="values" aria-labelledby="values-title">
+            <h2 class="section-title reveal" id="values-title" data-i18n="valuesTitle">თავდაჯერებულობა — მოვლილ ხელებში</h2>
+            <div class="values-grid">
+                <article class="value reveal">
+                    <span class="value-num">01</span>
+                    <h3 data-i18n="val1Title">სისუფთავე</h3>
+                    <p data-i18n="val1Text">ინსტრუმენტების სტერილიზაცია და ერთჯერადი მასალები ყოველი ვიზიტისთვის.</p>
+                </article>
+                <article class="value reveal">
+                    <span class="value-num">02</span>
+                    <h3 data-i18n="val2Title">ხარისხი</h3>
+                    <p data-i18n="val2Text">გამძლე საფარი და ფრთხილი მუშაობა, რომ ფრჩხილები ჯანსაღი დარჩეს.</p>
+                </article>
+                <article class="value reveal">
+                    <span class="value-num">03</span>
+                    <h3 data-i18n="val3Title">შენი დიზაინი</h3>
+                    <p data-i18n="val3Text">მინიმალისტური ფრენჩიდან დეტალურ ხელნაკეთ დიზაინამდე — შენს სტილზე მორგებით.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- სერვისების მოკლე მიმოხილვა: პოპულარული ფასები + ბმული სრულ სიაზე -->
+        <section class="teaser" aria-labelledby="teaser-title">
+            <div class="teaser-inner reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="teaserEyebrow">პოპულარული</p>
+                    <h2 class="section-title" id="teaser-title" data-i18n="teaserTitle">ფასები</h2>
+                    <a class="btn btn-ghost" href="service.html" data-i18n="teaserAll">ყველა სერვისი</a>
+                </div>
+                <ul class="price-list">
+                    <li><span data-i18n="serv_shellac_base">შილაკი გამაგრებით და ერთფერში</span><span class="price">40 ₾</span></li>
+                    <li><span data-i18n="serv_shellac_design">გამაგრებით და მარტივი დიზაინით</span><span class="price">45 ₾</span></li>
+                    <li><span data-i18n="serv_ext">დაგრძელება (1, 2, 3 ზომა)</span><span class="price">80 ₾</span></li>
+                    <li><span data-i18n="serv_clean">მხოლოდ მოწესრიგება</span><span class="price">20 ₾</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- კონტაქტების სექცია: მისამართი, საათები, ტელეფონი და სოციალური ქსელები -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 class="section-title reveal" id="contact-title" data-i18n="contactTitle">დაგვიკავშირდით</h2>
+            <div class="contact-grid">
+                <!-- ინფორმაციის ბლოკი -->
+                <div class="contact-card reveal">
+                    <h3 data-i18n="contactLocationTitle">სამუშაო საათები და ლოკაცია</h3>
+                    <dl class="meta-table">
+                        <div><dt data-i18n="lblAddress">მისამართი</dt><dd data-i18n="address">ქ. ბათუმი, პუშკინის ქუჩა 158ა</dd></div>
+                        <div><dt data-i18n="lblHours">საათები</dt><dd data-i18n="hours">ყოველდღე 10:00–20:00</dd></div>
+                        <div><dt data-i18n="phoneText">ტელეფონი</dt><dd><a href="tel:+995555740079">+995 555 74 00 79</a></dd></div>
+                    </dl>
+                </div>
+
+                <!-- სოციალური ქსელები და იმეილი -->
+                <div class="contact-card reveal">
+                    <h3 data-i18n="socialTitle">გამოგვყევით</h3>
+                    <p class="muted" data-i18n="socialText">მოგვწერეთ ან ნახეთ ახალი ნამუშევრები:</p>
+                    <div class="social-links">
+                        <!-- Instagram — შეცვალე ბმული შენი პროფილით -->
+                        <a href="https://www.instagram.com/tamtanails?cplk=MXZocWp3Nml2aGdldw==" class="social-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            <span>Instagram</span><span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <!-- იმეილი — შეცვალე შენი მისამართით -->
+                        <a href="mailto:tamtanails@gmail.com" class="social-btn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>Email</span><span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ფუტერი -->
+    <footer class="site-footer">
+        <span class="brand-name">Tamta <em>Nails</em></span>
+        <p>&copy; <span class="year">2026</span> Tamta Nails. <span data-i18n="footerText">ყველა უფლება დაცულია.</span></p>
+    </footer>
+</body>
+</html>

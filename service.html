@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <!-- მეტა მონაცემები: კოდირება, მობილური ეკრანი, სათაური და აღწერა -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სერვისები და ფასები — Tamta Nails</title>
+    <meta name="description" content="Tamta Nails-ის სერვისები და ფასები: შილაკი, დიზაინი, დაგრძელება, კორექცია და მოხსნა.">
+    <meta name="theme-color" content="#FAF6F2">
+    <link rel="icon" type="image/jpeg" href="img/mtavarilogo.jpg">
+
+    <!-- შრიფტები -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@400;500&display=swap">
+
+    <!-- სტილები და სკრიპტი -->
+    <link rel="stylesheet" href="tamtasnails.css">
+    <script src="tamtasnails.js" defer></script>
+</head>
+<body>
+    <!-- გადასვლის ბმული კლავიატურისთვის -->
+    <a class="skip-link" href="#main" data-i18n="skip">მთავარ შინაარსზე გადასვლა</a>
+
+    <!-- ჰედერი: ლოგო, ნავიგაცია, ენა და ჩაწერის ღილაკი -->
+    <header class="site-header" id="top">
+        <a class="brand" href="index.html" aria-label="Tamta Nails — მთავარი" data-i18n-aria="homeLabel">
+            <img src="./img/mtavarilogo.jpg" alt="" class="brand-logo" width="44" height="44">
+            <span class="brand-name">Tamta <em>Nails</em></span>
+        </a>
+
+        <!-- მობილური მენიუს ღილაკი -->
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="მენიუ" data-i18n-aria="menuLabel">
+            <span></span><span></span>
+        </button>
+
+        <!-- ნავიგაციის ბმულები (აქტიური გვერდი aria-current-ით) -->
+        <nav class="site-nav" id="site-nav">
+            <ul>
+                <li><a href="index.html#works" data-i18n="navWorks">ნამუშევრები</a></li>
+                <li><a href="service.html" aria-current="page" data-i18n="navServices">სერვისები</a></li>
+                <li><a href="index.html#contact" data-i18n="navContact">კონტაქტი</a></li>
+            </ul>
+            <div class="nav-actions">
+                <label class="visually-hidden" for="lang-switch" data-i18n="languageLabel">ენა</label>
+                <select id="lang-switch" class="lang-select" disabled>
+                    <option value="ka">ქარ</option>
+                    <option value="en">ENG</option>
+                    <option value="ru">РУС</option>
+                </select>
+                <a class="btn btn-primary btn-sm" href="tel:+995555740079" data-i18n="ctaBook">ჩაწერა</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- სერვისების Hero: სათაური და ვიდეო თაღოვან ჩარჩოში -->
+        <section class="hero hero-services">
+            <div class="hero-text">
+                <p class="eyebrow reveal" data-i18n="servEyebrow">სერვისები · ფასები</p>
+                <h1 class="hero-title reveal" data-i18n="services_title">ჩვენი სერვისები</h1>
+                <p class="hero-lead reveal" data-i18n="servLead">ყველა პროცედურა სრულდება სტერილური ინსტრუმენტებით და ხარისხიანი მასალებით. დიზაინის ფასი დამოკიდებულია სირთულეზე.</p>
+                <div class="hero-buttons reveal">
+                    <a class="btn btn-primary" href="tel:+995555740079" data-i18n="ctaBookLong">ჩაეწერე ვიზიტზე</a>
+                </div>
+            </div>
+
+            <!-- ნამუშევრის ვიდეო: MP4 (H.264), ხმის გარეშე და მართვის ღილაკებით -->
+            <figure class="hero-media reveal">
+                <div class="hero-blob" aria-hidden="true"></div>
+                <div class="arch">
+                    <video class="arch-video" autoplay loop muted playsinline controls preload="metadata" poster="img/sedegi2.jpg" aria-label="სალონის ნამუშევრის ვიდეო" data-i18n-aria="videoLabel">
+                        <source src="./video/nails-work.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </figure>
+        </section>
+
+        <!-- ფასების სია: ჯგუფებად დაყოფილი, editorial ცხრილის სტილში -->
+        <section class="prices" aria-label="ფასები" data-i18n-aria="pricesLabel">
+            <!-- ჯგუფი 1: მანიკური და დიზაინი -->
+            <div class="price-group reveal">
+                <h2 class="group-title"><span class="value-num">01</span> <span data-i18n="grpMani">მანიკური და დიზაინი</span></h2>
+                <ul class="price-list">
+                    <li><span data-i18n="serv_shellac_base">შილაკი გამაგრებით და ერთფერში</span><span class="price">40 ₾</span></li>
+                    <li><span data-i18n="serv_shellac_design">გამაგრებით და მარტივი დიზაინით</span><span class="price">45 ₾</span></li>
+                    <li><span data-i18n="serv_clean">მხოლოდ მოწესრიგება</span><span class="price">20 ₾</span></li>
+                    <li><span data-i18n="serv_design">დიზაინი</span><span class="price">5–50 ₾</span></li>
+                </ul>
+            </div>
+
+            <!-- ჯგუფი 2: დაგრძელება და მოდელირება -->
+            <div class="price-group reveal">
+                <h2 class="group-title"><span class="value-num">02</span> <span data-i18n="grpExt">დაგრძელება</span></h2>
+                <ul class="price-list">
+                    <li><span data-i18n="serv_ext">დაგრძელება (1, 2, 3 ზომა)</span><span class="price">80 ₾</span></li>
+                    <li><span data-i18n="serv_ext_corr">დაგრძელების კორექცია</span><span class="price">50 ₾</span></li>
+                    <li><span data-i18n="serv_model">ფრჩხილის მოდელირება</span><span class="price">50 ₾</span></li>
+                </ul>
+            </div>
+
+            <!-- ჯგუფი 3: მოხსნა -->
+            <div class="price-group reveal">
+                <h2 class="group-title"><span class="value-num">03</span> <span data-i18n="grpRemove">მოხსნა</span></h2>
+                <ul class="price-list">
+                    <li><span data-i18n="serv_rem_other">სხვისი გაკეთებულის მოხსნა</span><span class="price">5 ₾</span></li>
+                    <li><span data-i18n="serv_rem_ext">დაგრძელების მოხსნა</span><span class="price">10 ₾</span></li>
+                    <li><span data-i18n="serv_rem_pedi">პედიკურის მოხსნა</span><span class="price">10 ₾</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- კონტაქტების სექცია -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 class="section-title reveal" id="contact-title" data-i18n="contactTitle">დაგვიკავშირდით</h2>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <h3 data-i18n="contactLocationTitle">სამუშაო საათები და ლოკაცია</h3>
+                    <dl class="meta-table">
+                        <div><dt data-i18n="lblAddress">მისამართი</dt><dd data-i18n="address">ქ. ბათუმი, პუშკინის ქუჩა 158ა</dd></div>
+                        <div><dt data-i18n="lblHours">საათები</dt><dd data-i18n="hours">ყოველდღე 10:00–20:00</dd></div>
+                        <div><dt data-i18n="phoneText">ტელეფონი</dt><dd><a href="tel:+995555740079">+995 555 74 00 79</a></dd></div>
+                    </dl>
+                </div>
+                <div class="contact-card reveal">
+                    <h3 data-i18n="socialTitle">გამოგვყევით</h3>
+                    <p class="muted" data-i18n="socialText">მოგვწერეთ ან ნახეთ ახალი ნამუშევრები:</p>
+                    <div class="social-links">
+                        <!-- Instagram — შეცვალე ბმული შენი პროფილით -->
+                        <a href="https://www.instagram.com/tamtanails?cplk=MXZocWp3Nml2aGdldw==" class="social-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            <span>Instagram</span><span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <!-- იმეილი — შეცვალე შენი მისამართით -->
+                        <a href="mailto:tamtanails@gmail.com" class="social-btn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>Email</span><span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ფუტერი -->
+    <footer class="site-footer">
+        <span class="brand-name">Tamta <em>Nails</em></span>
+        <p>&copy; <span class="year">2026</span> Tamta Nails. <span data-i18n="footerText">ყველა უფლება დაცულია.</span></p>
+    </footer>
+</body>
+</html>
